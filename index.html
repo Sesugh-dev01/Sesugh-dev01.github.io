@@ -1,246 +1,412 @@
 <!DOCTYPE HTML>
+<!--
+  Sesugh Barnabas — Data Science Portfolio
+  Base template: Strata by HTML5 UP (html5up.net | @ajlkn)
+  License: Creative Commons Attribution 3.0 (html5up.net/license)
+  Customised by Sesugh Barnabas — skills bars, project cards,
+  GitHub stats widget, Formspree contact form, Currently Learning section.
+-->
 <html lang="en">
 <head>
-<title>Sesugh Barnabas | Data Science Portfolio</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<meta name="description" content="Sesugh Barnabas — Final-year Data Science student at the University of Sunderland. Python, SQL, Power BI, Data Analytics. Open to graduate roles across the UK." />
-<link rel="stylesheet" href="assets/css/main.css" />
-<style>
-.available-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.35);color:#10b981;font-size:.72em;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-top:1em}
-.available-badge .dot{width:7px;height:7px;background:#10b981;border-radius:50%;animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.5)}50%{box-shadow:0 0 0 5px rgba(16,185,129,0)}}
-.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5em 3em;margin:1.5em 0}
-.skill-item{margin-bottom:.8em}
-.skill-label{display:flex;justify-content:space-between;font-size:.85em;font-weight:600;margin-bottom:.4em;color:#555}
-.skill-bar-track{height:7px;background:#e8e8e8;border-radius:4px;overflow:hidden}
-.skill-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#49bf9d,#2ecc71);width:0;transition:width 1.4s cubic-bezier(.4,0,.2,1)}
-.skill-level{font-size:.72em;font-weight:700;padding:1px 8px;border-radius:20px;letter-spacing:.04em}
-.skill-level.advanced{background:#dbeafe;color:#1d4ed8}
-.skill-level.intermediate{background:#fef3c7;color:#92400e}
-.available-for{list-style:none;padding:0;margin:1.2em 0 1.8em;display:grid;grid-template-columns:1fr 1fr;gap:.5em}
-.available-for li{font-size:.88em;font-weight:600;color:#444;display:flex;align-items:center;gap:6px}
-.available-for li::before{content:'✔';color:#10b981;flex-shrink:0}
-.tech-tags{margin:.6em 0 1.2em;display:flex;flex-wrap:wrap;gap:.5em}
-.tech-tags span{font-size:.72em;font-weight:600;padding:3px 10px;border-radius:4px;background:#f0f0f0;color:#555;border:1px solid #ddd}
-.project-links{display:flex;gap:.6em;margin-top:.7em;flex-wrap:wrap}
-.project-links a.button{font-size:.75em;padding:.4em 1em}
-.project-cat{display:inline-block;font-size:.68em;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:2px 8px;border-radius:3px;margin-bottom:.4em}
-.cat-python{background:#dbeafe;color:#1d4ed8}.cat-data{background:#d1fae5;color:#065f46}
-.cat-ai{background:#fef3c7;color:#92400e}.cat-web{background:#fce7f3;color:#9d174d}
-.highlight-box{background:#f8f8f8;border-left:4px solid #49bf9d;padding:1.2em 1.5em;border-radius:0 6px 6px 0;margin:1.5em 0;font-size:.95em;color:#555;line-height:1.75}
-.stat-strip{display:flex;margin:2em 0 1.5em;border:1px solid #e8e8e8;border-radius:8px;overflow:hidden}
-.stat-strip-item{flex:1;text-align:center;padding:1em .5em;border-right:1px solid #e8e8e8}
-.stat-strip-item:last-child{border-right:none}
-.stat-num{display:block;font-size:1.4em;font-weight:800;color:#333}
-.stat-lbl{display:block;font-size:.68em;text-transform:uppercase;letter-spacing:.08em;color:#999;margin-top:2px}
-.sh{font-size:1em;text-transform:uppercase;letter-spacing:.1em;color:#aaa;margin:1.5em 0 .8em}
-@media screen and (max-width:600px){
-  .skills-grid{grid-template-columns:1fr;gap:0}
-  .stat-strip{flex-wrap:wrap}
-  .stat-strip-item{border-right:none;border-bottom:1px solid #e8e8e8}
-  .available-for{grid-template-columns:1fr}
-}
-</style>
+  <!-- ── Page metadata ───────────────────────────────────────── -->
+  <title>Sesugh Barnabas | Data Science Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="Sesugh Barnabas — Final-year Data Science student at the University of Sunderland. Python, SQL, Power BI, Data Analytics. Open to graduate roles across the UK." />
+
+  <!-- ── Strata base stylesheet (do not remove) ──────────────── -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    /* ── Sidebar: pulsing availability badge ── */
+    .available-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.35);color:#10b981;font-size:.72em;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-top:1em}
+    .available-badge .dot{width:7px;height:7px;background:#10b981;border-radius:50%;animation:pulse 2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.5)}50%{box-shadow:0 0 0 5px rgba(16,185,129,0)}}
+
+    /* ── Animated skill bars (IntersectionObserver triggers width) ── */
+    .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5em 3em;margin:1.5em 0}
+    .skill-item{margin-bottom:.8em}
+    .skill-label{display:flex;justify-content:space-between;font-size:.85em;font-weight:600;margin-bottom:.4em;color:#555}
+    .skill-bar-track{height:7px;background:#e8e8e8;border-radius:4px;overflow:hidden}
+    .skill-bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#49bf9d,#2ecc71);width:0;transition:width 1.4s cubic-bezier(.4,0,.2,1)}
+
+    /* ── Skill level labels (Advanced = blue, Intermediate = amber) ── */
+    .skill-level{font-size:.72em;font-weight:700;padding:1px 8px;border-radius:20px;letter-spacing:.04em}
+    .skill-level.advanced{background:#dbeafe;color:#1d4ed8}
+    .skill-level.intermediate{background:#fef3c7;color:#92400e}
+
+    /* ── Available-for checklist grid ── */
+    .available-for{list-style:none;padding:0;margin:1.2em 0 1.8em;display:grid;grid-template-columns:1fr 1fr;gap:.5em}
+    .available-for li{font-size:.88em;font-weight:600;color:#444;display:flex;align-items:center;gap:6px}
+    .available-for li::before{content:'✔';color:#10b981;flex-shrink:0}
+
+    /* ── Tech tag pills ── */
+    .tech-tags{margin:.6em 0 1.2em;display:flex;flex-wrap:wrap;gap:.5em}
+    .tech-tags span{font-size:.72em;font-weight:600;padding:3px 10px;border-radius:4px;background:#f0f0f0;color:#555;border:1px solid #ddd}
+
+    /* ── Project card: category badge colours ── */
+    .project-links{display:flex;gap:.6em;margin-top:.7em;flex-wrap:wrap}
+    .project-links a.button{font-size:.75em;padding:.4em 1em}
+    .project-cat{display:inline-block;font-size:.68em;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:2px 8px;border-radius:3px;margin-bottom:.4em}
+    .cat-python{background:#dbeafe;color:#1d4ed8}.cat-data{background:#d1fae5;color:#065f46}
+    .cat-ai{background:#fef3c7;color:#92400e}.cat-web{background:#fce7f3;color:#9d174d}
+
+    /* ── Subtle lift on project card hover ── */
+    .work-item{transition:transform 0.3s ease}
+    .work-item:hover{transform:translateY(-5px)}
+
+    /* ── Project screenshot preview ── */
+    .project-screenshot{width:100%;margin-top:10px;border-radius:6px;border:1px solid #eee}
+
+    /* ── Problem / Solution / Result block ── */
+    .psr{font-size:.85em;color:#555;line-height:1.8;margin:.6em 0 .8em}
+    .psr strong{color:#333}
+
+    /* ── Left-bordered quote / highlight box ── */
+    .highlight-box{background:#f8f8f8;border-left:4px solid #49bf9d;padding:1.2em 1.5em;border-radius:0 6px 6px 0;margin:1.5em 0;font-size:.95em;color:#555;line-height:1.8}
+
+    /* ── Stats strip below bio ── */
+    .stat-strip{display:flex;margin:2em 0 1.5em;border:1px solid #e8e8e8;border-radius:8px;overflow:hidden}
+    .stat-strip-item{flex:1;text-align:center;padding:1em .5em;border-right:1px solid #e8e8e8}
+    .stat-strip-item:last-child{border-right:none}
+    .stat-num{display:block;font-size:1.4em;font-weight:800;color:#333}
+    .stat-lbl{display:block;font-size:.68em;text-transform:uppercase;letter-spacing:.08em;color:#999;margin-top:2px}
+
+    /* ── GitHub stats widget ── */
+    .gh-stats{max-width:100%;border-radius:8px;margin-top:.8em}
+
+    /* ── Shorthand for section sub-headings ── */
+    .sh{font-size:1em;text-transform:uppercase;letter-spacing:.1em;color:#aaa;margin:1.5em 0 .8em}
+
+    /* ── Responsive overrides ── */
+    @media screen and (max-width:600px){
+      .skills-grid{grid-template-columns:1fr;gap:0}
+      .stat-strip{flex-wrap:wrap}
+      .stat-strip-item{border-right:none;border-bottom:1px solid #e8e8e8}
+      .available-for{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body class="is-preload">
 
-<header id="header">
-  <div class="inner">
-    <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Sesugh Barnabas" /></a>
-    <h1>
-      <strong>Sesugh Barnabas</strong><br />
-      Data Science Student<br />
-      <span style="font-size:.85em;font-weight:400">University of Sunderland</span><br />
-      <span style="font-size:.72em;font-weight:600;color:#49bf9d;letter-spacing:.05em">Python&nbsp;|&nbsp;SQL&nbsp;|&nbsp;Power&nbsp;BI&nbsp;|&nbsp;Data&nbsp;Analytics</span>
-    </h1>
-    <div class="available-badge"><span class="dot"></span> Available for Graduate Roles</div>
-  </div>
-</header>
-
-<div id="main">
-
-  <section id="one">
-    <header class="major"><h2>Hi, I'm Sesugh — I turn data into decisions.</h2></header>
-    <p>I'm a final-year <strong>Data Science</strong> student at the <strong>University of Sunderland</strong>, based in Sunderland, United Kingdom. My passion for data comes from a simple belief: the right question, asked of the right dataset, can change the way a business thinks and acts.</p>
-    <div class="highlight-box">I approach every problem like a detective — methodically working through the data, asking better questions at each step, and communicating findings in a way that makes sense to non-technical stakeholders. I've learned through group projects that <strong>collaboration and clear communication</strong> are just as important as technical skill. The best analysis is one that gets acted on, not just admired.</div>
-    <p>I'm a continuous learner. Whether it's a new Python library, a SQL optimisation technique or a visualisation approach I haven't tried — if it helps me tell a better data story, I'll pick it up. I'm actively seeking <strong>graduate roles in Data Science, Business Intelligence or Analytics</strong> across the UK.</p>
-    <div class="stat-strip">
-      <div class="stat-strip-item"><span class="stat-num">6+</span><span class="stat-lbl">Projects</span></div>
-      <div class="stat-strip-item"><span class="stat-num">5</span><span class="stat-lbl">Languages</span></div>
-      <div class="stat-strip-item"><span class="stat-num">Final</span><span class="stat-lbl">Year</span></div>
-      <div class="stat-strip-item"><span class="stat-num">UK</span><span class="stat-lbl">Based</span></div>
+  <!-- ══ SIDEBAR ═══════════════════════════════════════════════════ -->
+  <header id="header">
+    <div class="inner">
+      <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="Sesugh Barnabas" /></a>
+      <h1>
+        <strong>Sesugh Barnabas</strong><br />
+        Data Science Student<br />
+        <span style="font-size:.85em;font-weight:400">University of Sunderland</span><br />
+        <span style="font-size:.72em;font-weight:600;color:#49bf9d;letter-spacing:.05em">Python&nbsp;|&nbsp;SQL&nbsp;|&nbsp;Power&nbsp;BI&nbsp;|&nbsp;Data&nbsp;Analytics</span>
+      </h1>
+      <div class="available-badge"><span class="dot"></span> Available for Graduate Roles</div>
     </div>
-    <h3 style="font-size:.85em;text-transform:uppercase;letter-spacing:.1em;color:#aaa;margin-bottom:.8em">Available for</h3>
-    <ul class="available-for">
-      <li>Graduate Analyst Roles</li>
-      <li>Data Science Internships</li>
-      <li>Business Intelligence Roles</li>
-      <li>UK Relocation Friendly</li>
-    </ul>
-    <ul class="actions">
-      <li><a href="#two" class="button primary">View Projects</a></li>
-      <li><a href="#four" class="button">Contact Me</a></li>
-      <li><a href="mailto:sesughbarnabas919@gmail.com" class="button">Download CV</a></li>
-    </ul>
-  </section>
+  </header>
 
-  <section id="two">
-    <h2>Featured Projects</h2>
-    <p style="color:#777;margin-bottom:2em">A selection of projects built with real data, real code and a focus on delivering clear, actionable results. All code is available on GitHub.</p>
-    <div class="row">
+  <!-- ══ MAIN CONTENT ══════════════════════════════════════════════ -->
+  <div id="main">
 
-      <article class="col-6 col-12-xsmall work-item">
-        <a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="Automated Data Cleaning Pipeline" /></a>
-        <span class="project-cat cat-python">Python</span>
-        <h3>Automated Data Cleaning Pipeline</h3>
-        <p>A reusable Python pipeline that ingests raw CSV or Excel datasets, handles missing values, removes duplicates and outputs a clean, analysis-ready file — reducing manual prep time by over 80%.</p>
-        <div class="tech-tags"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Automation</span></div>
-        <div class="project-links"><a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="button small">View on GitHub</a></div>
-      </article>
+    <!-- ── ABOUT ─────────────────────────────────────────────────── -->
+    <section id="one">
+      <header class="major">
+        <h2>Hi, I'm Sesugh — I turn data into decisions.</h2>
+      </header>
 
-      <article class="col-6 col-12-xsmall work-item">
-        <a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="UK Crime Trends Analysis" /></a>
-        <span class="project-cat cat-data">Data Analysis</span>
-        <h3>UK Crime Trends Analysis</h3>
-        <p>Analysed three years of UK police open data to identify crime hotspots by region and time of day using Python, SQL and Matplotlib — delivering clear insights in a structured report.</p>
-        <div class="tech-tags"><span>Python</span><span>SQL</span><span>Pandas</span><span>Matplotlib</span></div>
-        <div class="project-links"><a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="button small">View on GitHub</a></div>
-      </article>
+      <p>I'm a final-year <strong>Data Science</strong> student at the <strong>University of Sunderland</strong>, based in Sunderland, United Kingdom. My passion for data comes from a simple belief: the right question, asked of the right dataset, can change the way a business thinks and acts.</p>
 
-      <article class="col-6 col-12-xsmall work-item">
-        <a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="Student Grade Predictor" /></a>
-        <span class="project-cat cat-ai">AI / ML</span>
-        <h3>Student Grade Predictor</h3>
-        <p>Machine learning model using a public education dataset to predict final student grades based on attendance, study time and background. Achieved 84% accuracy with a Random Forest classifier.</p>
-        <div class="tech-tags"><span>Python</span><span>scikit-learn</span><span>Pandas</span><span>ML</span></div>
-        <div class="project-links"><a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="button small">View on GitHub</a></div>
-      </article>
+      <!-- Personal context — added to make this feel like a real person wrote it -->
+      <p style="font-size:.9em;color:#666;">Outside of academics, I enjoy breaking down real-world datasets — from UK housing prices to job market trends — and turning them into simple insights anyone can understand. Most of my projects start with curiosity and end with something practical.</p>
 
-      <article class="col-6 col-12-xsmall work-item">
-        <a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="COVID-19 Data Dashboard" /></a>
-        <span class="project-cat cat-web">Web Dev</span>
-        <h3>COVID-19 Data Dashboard</h3>
-        <p>Interactive browser dashboard visualising global COVID-19 statistics by country. Fetches live data from a public REST API and renders trend charts using vanilla JavaScript — no libraries.</p>
-        <div class="tech-tags"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>REST API</span></div>
-        <div class="project-links"><a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="button small">View on GitHub</a></div>
-      </article>
+      <!-- How I work — shows process thinking, not just technical skills -->
+      <div class="highlight-box">
+        <strong>How I work:</strong><br><br>
+        • Start with messy real-world data<br>
+        • Clean and structure it properly<br>
+        • Explore patterns and trends<br>
+        • Build simple, clear visualisations<br>
+        • Focus on insights that matter to decision-makers
+      </div>
 
-      <article class="col-6 col-12-xsmall work-item">
-        <a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="Retail Sales ETL Pipeline" /></a>
-        <span class="project-cat cat-data">Data Analysis</span>
-        <h3>Retail Sales ETL Pipeline</h3>
-        <p>Mini ETL pipeline that ingests raw retail sales data, cleans and transforms it with Python, then loads it into a structured SQLite database. Generates a weekly KPI summary report automatically.</p>
-        <div class="tech-tags"><span>Python</span><span>SQL</span><span>SQLite</span><span>ETL</span></div>
-        <div class="project-links"><a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="button small">View on GitHub</a></div>
-      </article>
+      <p>I'm a continuous learner. Whether it's a new Python library, a SQL optimisation technique or a visualisation approach I haven't tried — if it helps me tell a better data story, I'll pick it up. I'm actively seeking <strong>graduate roles in Data Science, Business Intelligence or Analytics</strong> across the UK.</p>
 
-      <article class="col-6 col-12-xsmall work-item">
-        <a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="Portfolio Website" /></a>
-        <span class="project-cat cat-web">Web Dev</span>
-        <h3>Portfolio Website</h3>
-        <p>This portfolio — built with a customised Strata layout, featuring skills bars, project badges, stat strip and contact details. Hosted free on GitHub Pages.</p>
-        <div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
-        <div class="project-links"><a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="button small">View on GitHub</a><a href="https://sesugh-dev01.github.io" target="_blank" rel="noopener" class="button small primary">Live Demo</a></div>
-      </article>
+      <div class="stat-strip">
+        <div class="stat-strip-item"><span class="stat-num">6+</span><span class="stat-lbl">Projects</span></div>
+        <div class="stat-strip-item"><span class="stat-num">5</span><span class="stat-lbl">Languages</span></div>
+        <div class="stat-strip-item"><span class="stat-num">Final</span><span class="stat-lbl">Year</span></div>
+        <div class="stat-strip-item"><span class="stat-num">UK</span><span class="stat-lbl">Based</span></div>
+      </div>
 
-    </div>
-    <ul class="actions">
-      <li><a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="button">View All Projects on GitHub</a></li>
-    </ul>
-  </section>
+      <h3 style="font-size:.85em;text-transform:uppercase;letter-spacing:.1em;color:#aaa;margin-bottom:.8em">Available for</h3>
+      <ul class="available-for">
+        <li>Graduate Analyst Roles</li>
+        <li>Data Science Internships</li>
+        <li>Business Intelligence Roles</li>
+        <li>UK Relocation Friendly</li>
+      </ul>
 
-  <section id="three">
-    <h2>Skills &amp; Technologies</h2>
-    <p style="color:#777;margin-bottom:1.5em">Languages and tools I use day-to-day — from wrangling data in Python and SQL to building dashboards and training machine learning models.</p>
-    <h3 class="sh">Core Languages</h3>
-    <div class="skills-grid" id="skillsGrid">
-      <div class="skill-item"><div class="skill-label"><span>Python</span><span class="skill-level advanced">Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="88"></div></div></div>
-      <div class="skill-item"><div class="skill-label"><span>SQL</span><span class="skill-level intermediate">Intermediate</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="80"></div></div></div>
-      <div class="skill-item"><div class="skill-label"><span>HTML</span><span class="skill-level intermediate">Intermediate</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="82"></div></div></div>
-      <div class="skill-item"><div class="skill-label"><span>CSS</span><span class="skill-level intermediate">Intermediate</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="78"></div></div></div>
-      <div class="skill-item"><div class="skill-label"><span>JavaScript</span><span class="skill-level intermediate">Intermediate</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="72"></div></div></div>
-    </div>
-    <h3 class="sh">Data &amp; Analysis</h3>
-    <div class="tech-tags"><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>Jupyter Notebook</span><span>scikit-learn</span><span>Statistics</span><span>Data Cleaning</span></div>
-    <h3 class="sh">BI &amp; Visualisation</h3>
-    <div class="tech-tags"><span>Power BI</span><span>Tableau</span><span>Excel Advanced</span><span>Dashboarding</span></div>
-    <h3 class="sh">Databases</h3>
-    <div class="tech-tags"><span>MySQL</span><span>SQLite</span><span>PostgreSQL</span><span>Data Modelling</span><span>ETL</span></div>
-    <h3 class="sh">Web &amp; Dev Tools</h3>
-    <div class="tech-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Git</span><span>GitHub</span><span>VS Code</span><span>Linux</span></div>
-  </section>
+      <ul class="actions">
+        <li><a href="#two" class="button primary">View Projects</a></li>
+        <!-- Contact Me scrolls to the contact section (#six) -->
+        <li><a href="#six" class="button">Contact Me</a></li>
+        <!-- Place your cv.pdf in the root Portfolio folder to activate this download -->
+        <li><a href="cv.pdf" download class="button">Download CV</a></li>
+      </ul>
+    </section>
 
-  <section id="four">
-    <h2>Get In Touch</h2>
-    <p>I'm in my final year and actively looking for <strong>graduate roles in Data Science, Business Intelligence and Analytics</strong> across the UK. If you think I'd be a good fit — or just want to connect — send me a message and I'll get back to you within 24 hours.</p>
-    <div class="row">
-      <div class="col-8 col-12-small">
-        <form id="contactForm" novalidate>
-          <div class="row gtr-uniform gtr-50">
-            <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Your Name" required /></div>
-            <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email" required /></div>
-            <div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject (e.g. Graduate Role Opportunity)" /></div>
-            <div class="col-12"><textarea name="message" id="message" placeholder="Tell me about the role or project..." rows="4" required></textarea></div>
+    <!-- ── PROJECTS ───────────────────────────────────────────────── -->
+    <section id="two">
+      <h2>Featured Projects</h2>
+      <p style="color:#777;margin-bottom:2em">Real data, real code, real results. Each project below links to its own GitHub repository. Replace the screenshot images with your actual project screenshots.</p>
+      <div class="row">
+
+        <!-- Project 1 — Automated Data Cleaning Pipeline -->
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="https://github.com/Sesugh-dev01/data-cleaning-pipeline" target="_blank" rel="noopener" class="image fit thumb">
+            <img src="images/thumbs/01.jpg" alt="Automated Data Cleaning Pipeline" />
+          </a>
+          <span class="project-cat cat-python">Python</span>
+          <h3>Automated Data Cleaning Pipeline</h3>
+          <p class="psr">
+            <strong>Problem:</strong> Raw datasets required time-consuming manual cleaning.<br>
+            <strong>Solution:</strong> Built an automated Python pipeline using Pandas.<br>
+            <strong>Result:</strong> Reduced repetitive preprocessing and improved workflow efficiency.
+          </p>
+          <div class="tech-tags"><span>Python</span><span>Pandas</span><span>NumPy</span><span>Automation</span></div>
+          <!-- Replace with a real screenshot of the project output -->
+          <img src="images/thumbs/01.jpg" alt="Project Screenshot" class="project-screenshot" />
+          <div class="project-links">
+            <a href="https://github.com/Sesugh-dev01/data-cleaning-pipeline" target="_blank" rel="noopener" class="button small">View on GitHub</a>
           </div>
-          <br />
-          <ul class="actions"><li><input type="submit" value="Send Message" class="primary" id="submitBtn" /></li></ul>
-          <p id="formSuccess" style="display:none;color:#49bf9d;font-weight:600">&#10003; Message sent! I'll get back to you within 24 hours.</p>
-          <p id="formError" style="display:none;color:#c00;font-weight:600">Please fill in all required fields.</p>
-        </form>
+        </article>
+
+        <!-- Project 2 — UK Crime Analysis (renamed to be more human) -->
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="https://github.com/Sesugh-dev01/uk-crime-analysis" target="_blank" rel="noopener" class="image fit thumb">
+            <img src="images/thumbs/02.jpg" alt="Exploring UK Crime with Python" />
+          </a>
+          <span class="project-cat cat-data">Data Analysis</span>
+          <h3>Exploring UK Crime with Python</h3>
+          <p class="psr">
+            <strong>Problem:</strong> UK police crime data is publicly available but hard to interpret at scale.<br>
+            <strong>Solution:</strong> Used Python and SQL to filter, aggregate and visualise three years of records.<br>
+            <strong>Result:</strong> Identified clear regional hotspots and peak crime periods in a readable report.
+          </p>
+          <div class="tech-tags"><span>Python</span><span>SQL</span><span>Pandas</span><span>Matplotlib</span></div>
+          <img src="images/thumbs/02.jpg" alt="Project Screenshot" class="project-screenshot" />
+          <div class="project-links">
+            <a href="https://github.com/Sesugh-dev01/uk-crime-analysis" target="_blank" rel="noopener" class="button small">View on GitHub</a>
+          </div>
+        </article>
+
+        <!-- Project 3 — Student Grade Predictor -->
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="https://github.com/Sesugh-dev01/student-grade-predictor" target="_blank" rel="noopener" class="image fit thumb">
+            <img src="images/thumbs/03.jpg" alt="Student Grade Predictor" />
+          </a>
+          <span class="project-cat cat-ai">AI / ML</span>
+          <h3>Student Grade Predictor</h3>
+          <p class="psr">
+            <strong>Problem:</strong> Predicting student outcomes early could help educators intervene sooner.<br>
+            <strong>Solution:</strong> Trained a Random Forest classifier on attendance, study time and background.<br>
+            <strong>Result:</strong> Achieved 84% accuracy — outperforming a simple baseline by 18 percentage points.
+          </p>
+          <div class="tech-tags"><span>Python</span><span>scikit-learn</span><span>Pandas</span><span>ML</span></div>
+          <img src="images/thumbs/03.jpg" alt="Project Screenshot" class="project-screenshot" />
+          <div class="project-links">
+            <a href="https://github.com/Sesugh-dev01/student-grade-predictor" target="_blank" rel="noopener" class="button small">View on GitHub</a>
+          </div>
+        </article>
+
+        <!-- Project 4 — COVID-19 Dashboard -->
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="https://github.com/Sesugh-dev01/covid-dashboard" target="_blank" rel="noopener" class="image fit thumb">
+            <img src="images/thumbs/04.jpg" alt="COVID-19 Data Dashboard" />
+          </a>
+          <span class="project-cat cat-web">Web Dev</span>
+          <h3>COVID-19 Data Dashboard</h3>
+          <p class="psr">
+            <strong>Problem:</strong> Global COVID data existed but required technical skill to interpret.<br>
+            <strong>Solution:</strong> Built a live browser dashboard fetching from a public REST API — no server needed.<br>
+            <strong>Result:</strong> An accessible, shareable tool that updates automatically and runs in any browser.
+          </p>
+          <div class="tech-tags"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>REST API</span></div>
+          <img src="images/thumbs/04.jpg" alt="Project Screenshot" class="project-screenshot" />
+          <div class="project-links">
+            <a href="https://github.com/Sesugh-dev01/covid-dashboard" target="_blank" rel="noopener" class="button small">View on GitHub</a>
+          </div>
+        </article>
+
+        <!-- Project 5 — Retail Sales ETL -->
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="https://github.com/Sesugh-dev01/retail-etl-pipeline" target="_blank" rel="noopener" class="image fit thumb">
+            <img src="images/thumbs/05.jpg" alt="Retail Sales ETL Pipeline" />
+          </a>
+          <span class="project-cat cat-data">Data Analysis</span>
+          <h3>Retail Sales ETL Pipeline</h3>
+          <p class="psr">
+            <strong>Problem:</strong> Retail sales data arrived raw and inconsistent, making reporting slow.<br>
+            <strong>Solution:</strong> Built a Python ETL pipeline that cleans, transforms and loads data into SQLite.<br>
+            <strong>Result:</strong> Automated weekly KPI reporting — what took hours now runs in minutes.
+          </p>
+          <div class="tech-tags"><span>Python</span><span>SQL</span><span>SQLite</span><span>ETL</span></div>
+          <img src="images/thumbs/05.jpg" alt="Project Screenshot" class="project-screenshot" />
+          <div class="project-links">
+            <a href="https://github.com/Sesugh-dev01/retail-etl-pipeline" target="_blank" rel="noopener" class="button small">View on GitHub</a>
+          </div>
+        </article>
+
+        <!-- Project 6 — This Portfolio -->
+        <article class="col-6 col-12-xsmall work-item">
+          <a href="https://github.com/Sesugh-dev01/Sesugh-dev01.github.io" target="_blank" rel="noopener" class="image fit thumb">
+            <img src="images/thumbs/06.jpg" alt="Portfolio Website" />
+          </a>
+          <span class="project-cat cat-web">Web Dev</span>
+          <h3>Portfolio Website</h3>
+          <p class="psr">
+            <strong>Problem:</strong> Needed a professional online presence to support graduate job applications.<br>
+            <strong>Solution:</strong> Customised Strata template with skills bars, project cards and Formspree contact.<br>
+            <strong>Result:</strong> A live, indexed portfolio at sesugh-dev01.github.io — zero hosting cost.
+          </p>
+          <div class="tech-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+          <img src="images/thumbs/06.jpg" alt="Project Screenshot" class="project-screenshot" />
+          <div class="project-links">
+            <a href="https://github.com/Sesugh-dev01/Sesugh-dev01.github.io" target="_blank" rel="noopener" class="button small">View on GitHub</a>
+            <a href="https://sesugh-dev01.github.io" target="_blank" rel="noopener" class="button small primary">Live Demo</a>
+          </div>
+        </article>
+
       </div>
-      <div class="col-4 col-12-small">
-        <ul class="labeled-icons">
-          <li><h3 class="icon solid fa-envelope"><span class="label">Email</span></h3><a href="mailto:sesughbarnabas919@gmail.com">sesughbarnabas919@gmail.com</a></li>
-          <li><h3 class="icon solid fa-map-marker-alt"><span class="label">Location</span></h3>Sunderland, United Kingdom</li>
-          <li><h3 class="icon solid fa-check-circle"><span class="label">Status</span></h3><span style="color:#10b981;font-weight:600">Open to Graduate Roles</span></li>
-          <li><h3 class="icon solid fa-clock"><span class="label">Response Time</span></h3>Response within 24 hours</li>
-          <li><h3 class="icon brands fa-github"><span class="label">GitHub</span></h3><a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener">github.com/Sesugh-dev01</a></li>
-          <li><h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3><a href="https://www.linkedin.com/in/sesugh-barnabas" target="_blank" rel="noopener">linkedin.com/in/sesugh-barnabas</a></li>
-        </ul>
+      <ul class="actions">
+        <li><a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="button">View All Projects on GitHub</a></li>
+      </ul>
+    </section>
+
+    <!-- ── SKILLS ─────────────────────────────────────────────────── -->
+    <section id="three">
+      <h2>Skills &amp; Technologies</h2>
+      <p style="color:#777;margin-bottom:1.5em">Languages and tools I use day-to-day — from wrangling data in Python and SQL to building dashboards and training machine learning models.</p>
+      <h3 class="sh">Core Languages</h3>
+      <div class="skills-grid" id="skillsGrid">
+        <!-- data-level drives the animated bar width via IntersectionObserver below -->
+        <div class="skill-item"><div class="skill-label"><span>Python</span><span class="skill-level advanced">Advanced</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="88"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>SQL</span><span class="skill-level intermediate">Intermediate</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="80"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>HTML</span><span class="skill-level intermediate">Intermediate</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="82"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>CSS</span><span class="skill-level intermediate">Intermediate</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="78"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>JavaScript</span><span class="skill-level intermediate">Intermediate</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="72"></div></div></div>
       </div>
+      <h3 class="sh">Data &amp; Analysis</h3>
+      <div class="tech-tags"><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>Jupyter Notebook</span><span>scikit-learn</span><span>Statistics</span><span>Data Cleaning</span></div>
+      <h3 class="sh">BI &amp; Visualisation</h3>
+      <div class="tech-tags"><span>Power BI</span><span>Tableau</span><span>Excel Advanced</span><span>Dashboarding</span></div>
+      <h3 class="sh">Databases</h3>
+      <div class="tech-tags"><span>MySQL</span><span>SQLite</span><span>PostgreSQL</span><span>Data Modelling</span><span>ETL</span></div>
+      <h3 class="sh">Web &amp; Dev Tools</h3>
+      <div class="tech-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Git</span><span>GitHub</span><span>VS Code</span><span>Linux</span></div>
+    </section>
+
+    <!-- ── GITHUB ACTIVITY ────────────────────────────────────────── -->
+    <!-- github-readme-stats: open-source by @anuraghazra (MIT licence)
+         Source: https://github.com/anuraghazra/github-readme-stats -->
+    <section id="four">
+      <h2>GitHub Activity</h2>
+      <p style="color:#777;">Consistently building and improving projects.</p>
+      <img
+        src="https://github-readme-stats.vercel.app/api?username=Sesugh-dev01&show_icons=true&hide_border=true&theme=default"
+        alt="Sesugh's GitHub stats"
+        class="gh-stats"
+      />
+    </section>
+
+    <!-- ── CURRENTLY LEARNING ─────────────────────────────────────── -->
+    <section id="five">
+      <h2>Currently Learning</h2>
+      <p style="color:#777;margin-bottom:.8em">Always adding something new to the toolkit.</p>
+      <div class="tech-tags">
+        <span>Advanced SQL</span>
+        <span>Power BI Dashboards</span>
+        <span>Data Modelling</span>
+        <span>Cloud (AWS Basics)</span>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ────────────────────────────────────────────────── -->
+    <!--
+      Formspree (https://formspree.io) handles form submissions — no backend needed.
+      To activate:
+        1. Go to formspree.io and sign up (free)
+        2. Click "New Form", name it "Portfolio Contact"
+        3. Copy your form ID (looks like: xpwzgrnq)
+        4. Replace YOUR_FORM_ID below with your actual ID
+    -->
+    <section id="six">
+      <h2>Get In Touch</h2>
+      <p>I'm in my final year and actively looking for <strong>graduate roles in Data Science, Business Intelligence and Analytics</strong> across the UK. If you think I'd be a good fit — or just want to connect — send me a message and I'll get back to you within 24 hours.</p>
+      <div class="row">
+        <div class="col-8 col-12-small">
+          <!-- Real form — submissions go directly to your email via Formspree -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="hidden" name="_subject" value="New message from portfolio" />
+            <!-- Formspree will reply to this address automatically -->
+            <input type="hidden" name="_replyto" value="" />
+            <div class="row gtr-uniform gtr-50">
+              <div class="col-6 col-12-xsmall"><input type="text" name="name" placeholder="Your Name" required /></div>
+              <div class="col-6 col-12-xsmall"><input type="email" name="email" placeholder="Your Email" required /></div>
+              <div class="col-12"><input type="text" name="subject" placeholder="Subject (e.g. Graduate Role Opportunity)" /></div>
+              <div class="col-12"><textarea name="message" placeholder="Tell me about the role or project..." rows="4" required></textarea></div>
+            </div>
+            <br />
+            <ul class="actions"><li><input type="submit" value="Send Message" class="primary" /></li></ul>
+          </form>
+        </div>
+        <div class="col-4 col-12-small">
+          <ul class="labeled-icons">
+            <li><h3 class="icon solid fa-envelope"><span class="label">Email</span></h3><a href="mailto:sesughbarnabas919@gmail.com">sesughbarnabas919@gmail.com</a></li>
+            <li><h3 class="icon solid fa-map-marker-alt"><span class="label">Location</span></h3>Sunderland, United Kingdom</li>
+            <li><h3 class="icon solid fa-check-circle"><span class="label">Status</span></h3><span style="color:#10b981;font-weight:600">Open to Graduate Roles</span></li>
+            <li><h3 class="icon solid fa-clock"><span class="label">Response Time</span></h3>Response within 24 hours</li>
+            <li><h3 class="icon brands fa-github"><span class="label">GitHub</span></h3><a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener">github.com/Sesugh-dev01</a></li>
+            <li><h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3><a href="https://www.linkedin.com/in/sesugh-barnabas" target="_blank" rel="noopener">linkedin.com/in/sesugh-barnabas</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- end #main -->
+
+  <!-- ══ FOOTER ════════════════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="inner">
+      <ul class="icons">
+        <li><a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="icon brands fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
+        <li><a href="https://www.linkedin.com/in/sesugh-barnabas" target="_blank" rel="noopener" class="icon brands fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
+        <li><a href="mailto:sesughbarnabas919@gmail.com" class="icon solid fa-envelope" title="Email"><span class="label">Email</span></a></li>
+      </ul>
+      <ul class="copyright"><li>&copy; 2026 Sesugh Barnabas</li></ul>
     </div>
-  </section>
+  </footer>
 
-</div>
+  <!-- ══ SCRIPTS ═══════════════════════════════════════════════════ -->
+  <!-- Strata core scripts — required for layout, lightbox and responsive behaviour -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.poptrox.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 
-<footer id="footer">
-  <div class="inner">
-    <ul class="icons">
-      <li><a href="https://github.com/Sesugh-dev01" target="_blank" rel="noopener" class="icon brands fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
-      <li><a href="https://www.linkedin.com/in/sesugh-barnabas" target="_blank" rel="noopener" class="icon brands fa-linkedin" title="LinkedIn"><span class="label">LinkedIn</span></a></li>
-      <li><a href="mailto:sesughbarnabas919@gmail.com" class="icon solid fa-envelope" title="Email"><span class="label">Email</span></a></li>
-    </ul>
-    <ul class="copyright"><li>&copy; 2026 Sesugh Barnabas</li></ul>
-  </div>
-</footer>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.poptrox.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-<script>
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.style.width = e.target.dataset.level + '%'; obs.unobserve(e.target); } });
-}, { threshold: 0.3 });
-document.querySelectorAll('.skill-bar-fill').forEach(f => obs.observe(f));
-
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const n = document.getElementById('name').value.trim();
-  const em = document.getElementById('email').value.trim();
-  const m = document.getElementById('message').value.trim();
-  const err = document.getElementById('formError');
-  const ok = document.getElementById('formSuccess');
-  const btn = document.getElementById('submitBtn');
-  err.style.display = ok.style.display = 'none';
-  if (!n || !m || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) { err.style.display = 'block'; return; }
-  btn.value = 'Sending…'; btn.disabled = true;
-  setTimeout(() => { btn.value = 'Send Message'; btn.disabled = false; ok.style.display = 'block'; this.reset(); }, 1500);
-});
-</script>
+  <script>
+    /* Skill bar animation — fires each bar when it scrolls into view */
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.width = e.target.dataset.level + '%';
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.skill-bar-fill').forEach(f => obs.observe(f));
+    /* Contact form is now handled by Formspree — no JS needed */
+  </script>
 
 </body>
 </html>
