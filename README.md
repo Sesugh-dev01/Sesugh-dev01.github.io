@@ -2,7 +2,7 @@
 
 Personal portfolio website for Sesugh Barnabas, a final-year Data Science student at the University of Sunderland.
 
-**Live site:** https://SesughBarnabas1.github.io
+**Live site:** https://sesugh-dev01.github.io
 
 ---
 
