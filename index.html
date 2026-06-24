@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -106,7 +106,7 @@
               <span>Data Science</span>
             </div>
             <div class="about__badge about__badge--2">
-              <span class="about__badge-num">5+</span>
+              <span class="about__badge-num">3+</span>
               <span>DS Projects</span>
             </div>
           </div>
@@ -114,11 +114,11 @@
         <div class="about__text-col reveal">
           <h3 class="about__subtitle">MSc Data Science Graduate</h3>
           <p class="about__body">
-            I'm finishing an MSc in Data Science, working across the full pipeline — from
-            <strong>multi-source ETL and database design</strong> to
-            <strong>NLP classifiers and deployed ML dashboards</strong>.
-            My coursework uses real datasets and follows structured methodologies like CRISP-DM,
-            so what I build is traceable, reproducible, and honest about its limitations.
+            I'm finishing an MSc in Data Science, building hands-on experience across the full
+            data pipeline — from <strong>exploratory analysis and data cleaning</strong> to
+            <strong>visualisation, REST APIs, and desktop application development</strong>.
+            I work with real-world datasets and focus on producing findings that are clear,
+            reproducible, and honest about their limitations.
           </p>
           <p class="about__body">
             What drives me is closing the gap between a notebook experiment and something genuinely
@@ -159,123 +159,12 @@
       </div>
       <div class="projects__filter reveal">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="ml">ML / AI</button>
-        <button class="filter-btn" data-filter="nlp">NLP</button>
-        <button class="filter-btn" data-filter="data-eng">Data Eng</button>
         <button class="filter-btn" data-filter="eda">EDA</button>
+        <button class="filter-btn" data-filter="app">Python App</button>
       </div>
       <div class="projects__grid" id="projectsGrid">
 
-        <!-- ── PROJECT 1: AirGuard UK ── -->
-        <div class="project-card reveal" data-category="ml">
-          <div class="project-card__header" style="--card-color:#6c63ff">
-            <div class="project-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.3 24.3 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/sesugh-dev01" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
-              <a href="#" aria-label="Live demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-          </div>
-          <h3 class="project-card__title">AirGuard UK — Air Quality Dashboard</h3>
-          <p class="project-card__desc">Urban air quality data exists but rarely reaches the people who need it. Built a Streamlit dashboard on the UCI Air Quality Dataset (9,000+ sensor readings) that surfaces daily and weekly pollution trends and trains a Random Forest to predict CO concentrations. The model achieves R² &gt; 0.85 on held-out data. Any local authority can deploy this template in under 10 minutes.</p>
-          <div class="project-card__tags">
-            <span>Python</span><span>Streamlit</span><span>scikit-learn</span><span>Plotly</span><span>Pandas</span>
-          </div>
-        </div>
-
-        <!-- ── PROJECT 2: Tweet NLP ── -->
-        <div class="project-card reveal" data-category="nlp">
-          <div class="project-card__header" style="--card-color:#3ecfcf">
-            <div class="project-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253M3 12a8.96 8.96 0 0 0 .284 2.253"/></svg>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/sesugh-dev01" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
-              <a href="#" aria-label="Live demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-          </div>
-          <h3 class="project-card__title">Tweet Topic Classifier — NLP Pipeline</h3>
-          <p class="project-card__desc">Manual content moderation doesn't scale. Built a full NLP classification pipeline on 6,443 tweets across 6 imbalanced topic categories, benchmarking three models under a CRISP-DM framework. TF-IDF bigrams with a LinearSVC achieved 79.83% accuracy and 63.18% macro F1 — outperforming the Naive Bayes baseline by 5 points on a genuinely hard, skewed dataset.</p>
-          <div class="project-card__tags">
-            <span>Python</span><span>NLTK</span><span>scikit-learn</span><span>TF-IDF</span><span>LinearSVC</span>
-          </div>
-        </div>
-
-        <!-- ── PROJECT 3: ETL Pipeline ── -->
-        <div class="project-card reveal" data-category="data-eng">
-          <div class="project-card__header" style="--card-color:#f97316">
-            <div class="project-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm-3 6h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Z"/></svg>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/sesugh-dev01" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
-              <a href="#" aria-label="Live demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-          </div>
-          <h3 class="project-card__title">Multi-Source ETL Pipeline</h3>
-          <p class="project-card__desc">Organisations routinely receive customer records from incompatible systems. Built a Python ETL pipeline that extracts from CSV, JSON, and XML sources, applies regex-based normalisation (name standardisation, type casting, deduplication), and loads into a unified SQLite schema via PonyORM. A production-ready template for consolidating heterogeneous data — a daily reality in enterprise data engineering.</p>
-          <div class="project-card__tags">
-            <span>Python</span><span>PonyORM</span><span>SQLite</span><span>ETL</span><span>Data Engineering</span>
-          </div>
-        </div>
-
-        <!-- ── PROJECT 4: Property Predictor (new) ── -->
-        <div class="project-card reveal" data-category="ml">
-          <div class="project-card__header" style="--card-color:#ec4899">
-            <div class="project-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 15.75l5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/></svg>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/sesugh-dev01" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
-              <a href="#" aria-label="Live demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-          </div>
-          <h3 class="project-card__title">UK Property Price Predictor</h3>
-          <p class="project-card__desc">HM Land Registry publishes every UK residential sale — 28M+ transactions going back to 1995, all open data. Building an XGBoost regression model to predict property values by postcode, with SHAP feature attribution so predictions are explainable to non-technical stakeholders. Deploying as a Streamlit app on Render. Directly applicable to PropTech and housing analytics roles.</p>
-          <div class="project-card__tags">
-            <span>Python</span><span>XGBoost</span><span>SHAP</span><span>Streamlit</span><span style="color:#f97316;background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.3);border-radius:6px;padding:3px 10px;">In Progress</span>
-          </div>
-        </div>
-
-        <!-- ── PROJECT 5: NHS Forecaster (new) ── -->
-        <div class="project-card reveal" data-category="ml">
-          <div class="project-card__header" style="--card-color:#22c55e">
-            <div class="project-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/></svg>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/sesugh-dev01" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
-              <a href="#" aria-label="Live demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-          </div>
-          <h3 class="project-card__title">NHS A&amp;E Demand Forecaster</h3>
-          <p class="project-card__desc">NHS trusts spend heavily on staffing without reliable short-term demand forecasts. Using NHS England weekly A&amp;E attendance open data to train a Prophet time-series model with seasonal and bank-holiday effects. Predictions served via FastAPI with a Streamlit dashboard for trust-level comparison — built for the kind of operational analytics roles the NHS and its partners hire for.</p>
-          <div class="project-card__tags">
-            <span>Python</span><span>Prophet</span><span>FastAPI</span><span>Streamlit</span><span style="color:#f97316;background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.3);border-radius:6px;padding:3px 10px;">In Progress</span>
-          </div>
-        </div>
-
-        <!-- ── PROJECT 6: Churn (new) ── -->
-        <div class="project-card reveal" data-category="ml">
-          <div class="project-card__header" style="--card-color:#a855f7">
-            <div class="project-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"/></svg>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/sesugh-dev01" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
-              <a href="#" aria-label="Live demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-            </div>
-          </div>
-          <h3 class="project-card__title">Customer Churn Intelligence</h3>
-          <p class="project-card__desc">Most churn models tell you who will leave but not why — making them hard for business teams to act on. Building a LightGBM classifier on the IBM Telco Churn dataset with SHAP waterfall charts for per-customer explanations and a segment-level Streamlit dashboard. The explainability layer is the differentiator — UK employers in finance and telecoms increasingly require models they can interrogate.</p>
-          <div class="project-card__tags">
-            <span>Python</span><span>LightGBM</span><span>SHAP</span><span>Streamlit</span><span style="color:#f97316;background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.3);border-radius:6px;padding:3px 10px;">In Progress</span>
-          </div>
-        </div>
-
-
-        <!-- ── PROJECT 7: Titanic EDA ── -->
+        <!-- ── PROJECT 1: Titanic EDA ── -->
         <div class="project-card reveal" data-category="eda">
           <div class="project-card__header" style="--card-color:#0ea5e9">
             <div class="project-card__icon">
@@ -292,7 +181,7 @@
           </div>
         </div>
 
-        <!-- ── PROJECT 8: Superstore Sales Dashboard ── -->
+        <!-- ── PROJECT 2: Superstore Sales Dashboard ── -->
         <div class="project-card reveal" data-category="eda">
           <div class="project-card__header" style="--card-color:#f59e0b">
             <div class="project-card__icon">
@@ -306,6 +195,23 @@
           <p class="project-card__desc">Analysis of 8,399 retail transactions across 21 variables to surface regional performance gaps, category trends, and top-selling products. The West region led with £3.6M in sales while Nunavut trailed at £116K — a 31× gap pointing to untapped regional opportunity. Monthly trend analysis revealed consistent Q4 spikes, informing inventory and staffing decisions for a business running on seasonal demand.</p>
           <div class="project-card__tags">
             <span>Python</span><span>Pandas</span><span>Matplotlib</span><span>GroupBy</span><span>EDA</span>
+          </div>
+        </div>
+
+        <!-- ── PROJECT 3: Weather App ── -->
+        <div class="project-card reveal" data-category="app">
+          <div class="project-card__header" style="--card-color:#6c63ff">
+            <div class="project-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z"/></svg>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/Sesugh-dev01/Weather-app" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Desktop Weather App — PyQt5</h3>
+          <p class="project-card__desc">A fully functional desktop GUI application that fetches live weather data from the OpenWeatherMap API and displays temperature, conditions, and weather emoji for any city worldwide. Built with PyQt5, handles all HTTP error codes gracefully, and loads API credentials securely from a .env file — demonstrating REST API integration, event-driven UI design, and secure configuration management.</p>
+          <div class="project-card__tags">
+            <span>Python</span><span>PyQt5</span><span>REST API</span><span>python-dotenv</span><span>GUI</span>
           </div>
         </div>
 
