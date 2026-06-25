@@ -174,19 +174,22 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => revealObserver.observe(el));
 
-/* ── SKILL BAR ANIMATION ───────────────────────────────────── */
-const skillBars = document.querySelectorAll('.skill-bar__fill');
+/* ── SKILL SEGMENT ANIMATION ───────────────────────────────── */
+const skillSegs = document.querySelectorAll('.skill-segs');
 
-const barObserver = new IntersectionObserver((entries) => {
+const segObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('animated');
-      barObserver.unobserve(entry.target);
+      entry.target.querySelectorAll('.seg--on').forEach((seg, i) => {
+        seg.style.opacity = '0';
+        setTimeout(() => { seg.style.transition = 'opacity .4s ease'; seg.style.opacity = '1'; }, i * 150);
+      });
+      segObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.3 });
+}, { threshold: 0.5 });
 
-skillBars.forEach(bar => barObserver.observe(bar));
+skillSegs.forEach(s => segObserver.observe(s));
 
 /* ── PROJECT FILTER ────────────────────────────────────────── */
 const filterBtns   = document.querySelectorAll('.filter-btn');
