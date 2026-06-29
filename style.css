@@ -79,6 +79,40 @@ button { cursor: pointer; font-family: var(--font); }
 }
 .btn--full { width: 100%; justify-content: center; }
 
+/* Download CV button — accent-2 tinted, distinct from primary */
+.btn--cv {
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+  background: rgba(62,207,207,.08);
+}
+.btn--cv:hover {
+  background: rgba(62,207,207,.18);
+  transform: translateY(-2px);
+  box-shadow: 0 0 28px rgba(62,207,207,.35);
+}
+.btn--cv svg { width: 18px; height: 18px; }
+.about__cta { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* Compact CV button in the navbar */
+.nav__cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: var(--radius);
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--accent-2);
+  border: 1.5px solid var(--accent-2);
+  background: rgba(62,207,207,.06);
+  transition: var(--transition);
+}
+.nav__cv:hover {
+  background: rgba(62,207,207,.18);
+  box-shadow: 0 0 20px rgba(62,207,207,.3);
+}
+.nav__cv svg { width: 15px; height: 15px; }
+
 /* ── NAV ───────────────────────────────────────────────────── */
 .nav {
   position: fixed;
