@@ -1,459 +1,216 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sesugh Barnabas — Data Science Portfolio</title>
-  <meta name="description" content="MSc Data Science graduate based in the UK. I build ML pipelines, NLP classifiers, and data dashboards. Open to graduate roles and visa sponsorship." />
-  <meta name="author" content="Sesugh Barnabas" />
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Sesugh Barnabas — Data Science Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Portfolio of Sesugh Barnabas — MSc Data Science graduate building data products with Python, SQL and machine learning. Open to graduate Data Scientist / Data Analyst roles in the UK." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-  <!-- Open Graph — controls preview on LinkedIn, WhatsApp, email -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://sesugh-dev01.github.io/" />
-  <meta property="og:title"       content="Sesugh Barnabas — Data Science Portfolio" />
-  <meta property="og:description" content="MSc Data Science graduate based in the UK. ML pipelines, NLP classifiers, deployed dashboards. Open to graduate roles and visa sponsorship." />
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
 
-  <!-- Twitter card -->
-  <meta name="twitter:card"        content="summary" />
-  <meta name="twitter:title"       content="Sesugh Barnabas — Data Science Portfolio" />
-  <meta name="twitter:description" content="MSc Data Science graduate based in the UK. Open to graduate roles and visa sponsorship." />
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Sesugh Barnabas</h1>
+						<p>I build data products that turn messy, real-world datasets<br />
+						into decisions people can act on.</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Sesugh Barnabas</a>
+					</header>
 
-  <!-- ── NAV ───────────────────────────────────────────────────── -->
-  <nav class="nav" id="nav">
-    <div class="nav__logo">
-      <span class="nav__logo-bracket">&lt;</span>SBK<span class="nav__logo-bracket">/&gt;</span>
-    </div>
-    <ul class="nav__links" id="navLinks">
-      <li><a href="#home"    class="nav__link">Home</a></li>
-      <li><a href="#about"   class="nav__link">About</a></li>
-      <li><a href="#projects"class="nav__link">Projects</a></li>
-      <li><a href="#skills"  class="nav__link">Skills</a></li>
-      <li><a href="#contact" class="nav__link">Contact</a></li>
-      <li><a href="Sesugh_Barnabas_CV.pdf" class="nav__cv" download="Sesugh_Barnabas_CV.pdf">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
-        CV
-      </a></li>
-    </ul>
-    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#skills">Skills</a></li>
+							<li><a href="#projects">Projects</a></li>
+							<li><a href="#footer">Contact</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://github.com/Sesugh-dev01" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/sesugh-barnabas" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:sesughbarnabas919@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+					</nav>
 
-  <!-- ── HOME ──────────────────────────────────────────────────── -->
-  <section class="hero" id="home">
-    <canvas id="particleCanvas"></canvas>
-    <div class="hero__content">
-      <p class="hero__greeting">Hi, I'm</p>
-      <h1 class="hero__name">Sesugh Barnabas</h1>
-      <div class="hero__role-wrapper">
-        <span class="hero__role" id="typingText"></span>
-        <span class="hero__cursor">|</span>
-      </div>
-      <p class="hero__desc">
-        I build data products that turn messy, real-world datasets into decisions people can act on.
-        MSc Data Science graduate seeking roles in the UK — open to visa sponsorship.
-      </p>
-      <div class="hero__cta">
-        <a href="#projects" class="btn btn--primary">View My Work</a>
-        <a href="Sesugh_Barnabas_CV.pdf" class="btn btn--cv" download="Sesugh_Barnabas_CV.pdf">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
-          Download CV
-        </a>
-        <a href="#contact"  class="btn btn--outline">Get In Touch</a>
-      </div>
-      <div class="hero__socials">
-        <a href="https://github.com/sesugh-dev01" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/sesugh-barnabas" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="mailto:sesughbarnabas919@gmail.com" class="social-icon" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.264.069-.51.191-.729L11.455 12l.545.41.545-.41L23.809 4.728c.122.219.191.465.191.729z"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="hero__scroll-hint">
-      <span>Scroll</span>
-      <div class="hero__scroll-line"></div>
-    </div>
-  </section>
+				<!-- Main -->
+					<div id="main">
 
-  <!-- ── ABOUT ──────────────────────────────────────────────────── -->
-  <section class="section about" id="about">
-    <div class="container">
-      <div class="section__header reveal">
-        <span class="section__tag">About Me</span>
-        <h2 class="section__title">Who I Am</h2>
-      </div>
-      <div class="about__grid">
-        <div class="about__image-col reveal">
-          <div class="about__avatar-frame">
-            <div class="about__avatar">
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#6c63ff"/>
-                    <stop offset="100%" style="stop-color:#3ecfcf"/>
-                  </linearGradient>
-                </defs>
-                <circle cx="100" cy="100" r="100" fill="url(#avatarGrad)" opacity="0.15"/>
-                <circle cx="100" cy="80" r="35" fill="url(#avatarGrad)"/>
-                <ellipse cx="100" cy="175" rx="55" ry="45" fill="url(#avatarGrad)"/>
-              </svg>
-            </div>
-            <div class="about__badge about__badge--1">
-              <span class="about__badge-num">MSc</span>
-              <span>Data Science</span>
-            </div>
-            <div class="about__badge about__badge--2">
-              <span class="about__badge-num">5+</span>
-              <span>DS Projects</span>
-            </div>
-          </div>
-        </div>
-        <div class="about__text-col reveal">
-          <h3 class="about__subtitle">MSc Data Science Graduate</h3>
-          <p class="about__body">
-            I am completing an MSc in Data Science, gaining practical experience across the entire
-            data pipeline, including <strong>exploratory analysis, data cleaning, visualisation,
-            REST APIs, and desktop application development</strong>. I work with real-world datasets
-            and prioritise producing clear, reproducible findings that accurately reflect their limitations.
-          </p>
-          <p class="about__body">
-            I am motivated by transforming experimental work into <strong>practical solutions</strong>.
-            I value clean pipelines, fair evaluation, and results that are accessible and actionable
-            for non-specialists. I am seeking graduate roles in the UK where data plays a
-            <em>critical role in decision-making</em>.
-          </p>
-          <div class="currently-learning reveal">
-            <span class="cl-label">Currently learning</span>
-            <div class="cl-tags">
-              <span>scikit-learn</span>
-              <span>Model Evaluation</span>
-              <span>Feature Engineering</span>
-            </div>
-          </div>
-          <div class="about__info-grid">
-            <div class="about__info-item">
-              <span class="about__info-label">Degree</span>
-              <span class="about__info-value">MSc Data Science</span>
-            </div>
-            <div class="about__info-item">
-              <span class="about__info-label">University</span>
-              <span class="about__info-value">University of Sunderland</span>
-            </div>
-            <div class="about__info-item">
-              <span class="about__info-label">Location</span>
-              <span class="about__info-value">United Kingdom</span>
-            </div>
-            <div class="about__info-item">
-              <span class="about__info-label">Availability</span>
-              <span class="about__info-value">Grad Roles · Visa Sponsorship</span>
-            </div>
-          </div>
-          <div class="about__cta">
-            <a href="https://www.linkedin.com/in/sesugh-barnabas" class="btn btn--primary" target="_blank" rel="noopener">View LinkedIn</a>
-            <a href="Sesugh_Barnabas_CV.pdf" class="btn btn--cv" download="Sesugh_Barnabas_CV.pdf">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
-              Download CV
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+						<!-- About -->
+							<article class="post featured" id="about">
+								<header class="major">
+									<h2>About me</h2>
+									<p>I'm an MSc Data Science graduate (University of Sunderland) motivated by turning
+									experimental work into practical solutions. I care about clean pipelines, fair
+									evaluation, and results that are accessible and actionable for non-specialists.</p>
+									<p>I'm open to graduate Data Scientist / Data Analyst roles in the UK, where data
+									drives the decisions — visa sponsorship available. Currently sharpening my skills in
+									scikit-learn model evaluation and feature engineering.</p>
+								</header>
+								<ul class="actions special">
+									<li><a href="assets/Sesugh_Barnabas_Kwaghmande_CV.pdf" class="button large icon solid fa-download" download>Download CV</a></li>
+								</ul>
+							</article>
 
-  <!-- ── PROJECTS ───────────────────────────────────────────────── -->
-  <section class="section projects" id="projects">
-    <div class="container">
-      <div class="section__header reveal">
-        <span class="section__tag">My Work</span>
-        <h2 class="section__title">Featured Projects</h2>
-      </div>
-      <div class="projects__filter reveal">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="ml">Machine Learning</button>
-        <button class="filter-btn" data-filter="eda">EDA</button>
-        <button class="filter-btn" data-filter="sql">SQL</button>
-        <button class="filter-btn" data-filter="app">Python App</button>
-      </div>
-      <div class="projects__grid" id="projectsGrid">
+						<!-- Skills -->
+							<section class="post" id="skills">
+								<header class="major">
+									<h2>Skills &amp; tech stack</h2>
+								</header>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<h3>Core proficiency</h3>
+										<ul>
+											<li>Python — <em>Proficient</em></li>
+											<li>Data Analysis &amp; EDA — <em>Comfortable</em></li>
+											<li>Data Visualisation — <em>Comfortable</em></li>
+											<li>SQL &amp; Databases — <em>Comfortable</em></li>
+											<li>Machine Learning — <em>Learning</em></li>
+										</ul>
+									</div>
+									<div class="col-6 col-12-medium">
+										<h3>Tech stack</h3>
+										<ul>
+											<li><strong>Data analysis:</strong> Pandas, NumPy, SQL, EDA, ETL/ELT, CRISP-DM</li>
+											<li><strong>Machine learning:</strong> scikit-learn, Random Forest, SVM, XGBoost, Feature Engineering</li>
+											<li><strong>Visualisation &amp; deployment:</strong> Plotly, Streamlit, Matplotlib, Seaborn, FastAPI</li>
+											<li><strong>Engineering &amp; tools:</strong> Git, Docker, SQLite, PostgreSQL, REST APIs, Linux</li>
+										</ul>
+									</div>
+								</div>
+							</section>
 
-        <!-- ── PROJECT: House Price Prediction (ML regression) ── -->
-        <div class="project-card reveal" data-category="ml">
-          <div class="project-card__header" style="--card-color:#e11d48">
-            <div class="project-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 12 11.204 3.045c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/Sesugh-dev01/house-price-prediction" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
-            </div>
-          </div>
-          <h3 class="project-card__title">House Price Prediction — Regression</h3>
-          <p class="project-card__desc">Built a leakage-free regression pipeline on the Ames Housing dataset (1,460 homes, 79 features), handling missing values and one-hot encoding inside a scikit-learn ColumnTransformer so the same transforms apply at train and inference time. Compared five models with cross-validation — Gradient Boosting proved most reliable, predicting sale prices to within ~£17k (MAE) and explaining ~88% of price variance (R²). A clear example of why model choice is driven by cross-validation, not a single lucky split.</p>
-          <div class="project-card__tags">
-            <span>Python</span><span>scikit-learn</span><span>Pandas</span><span>Gradient Boosting</span><span>Regression</span>
-          </div>
-        </div>
+						<!-- Projects -->
+							<section class="posts" id="projects">
+								<article>
+									<header>
+										<h2><a href="https://github.com/Sesugh-dev01/House-price-prediction">House Price Prediction — Regression</a></h2>
+									</header>
+									<a href="https://github.com/Sesugh-dev01/House-price-prediction" class="image fit"><img src="images/house.jpg" alt="House price prediction project" /></a>
+									<p>Regression pipeline on the Ames Housing dataset (1,460 homes, 79 features) using a
+									scikit-learn ColumnTransformer for leakage-free transforms. A Gradient Boosting model
+									reached ~£17k MAE and 88% R².</p>
+									<p><strong>Stack:</strong> Python, scikit-learn, Pandas, Gradient Boosting.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/Sesugh-dev01/House-price-prediction" class="button">View Project</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2><a href="https://github.com/Sesugh-dev01/titanic-survival-analysis">Titanic Survival Analysis — EDA</a></h2>
+									</header>
+									<a href="https://github.com/Sesugh-dev01/titanic-survival-analysis" class="image fit"><img src="images/titanic.jpg" alt="Titanic survival analysis project" /></a>
+									<p>Explored 891 passenger records, handling missing Age (20%) and Cabin (77%) values.
+									Key finding: women in first class survived at 97% vs 13% for men in third class.</p>
+									<p><strong>Stack:</strong> Python, Pandas, Matplotlib, Seaborn.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/Sesugh-dev01/titanic-survival-analysis" class="button">View Project</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2><a href="https://github.com/Sesugh-dev01/superstore-sales-dashboard">Superstore Sales Dashboard</a></h2>
+									</header>
+									<a href="https://github.com/Sesugh-dev01/superstore-sales-dashboard" class="image fit"><img src="images/superstore.jpg" alt="Superstore sales dashboard" /></a>
+									<p>Analysed 8,399 retail transactions across 21 variables. The West region led with
+									£3.6M in sales while Nunavut trailed at £116K.</p>
+									<p><strong>Stack:</strong> Python, Pandas, Matplotlib.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/Sesugh-dev01/superstore-sales-dashboard" class="button">View Project</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2><a href="https://github.com/Sesugh-dev01/hospital-sql-analysis">Hospital Patient SQL Analysis</a></h2>
+									</header>
+									<a href="https://github.com/Sesugh-dev01/hospital-sql-analysis" class="image fit"><img src="images/hospital.jpg" alt="Hospital patient SQL analysis project" /></a>
+									<p>Built a SQLite patient database and answered five business questions — including the
+									most common condition (Diabetes, 2 of 5 patients) and average patient age (44).</p>
+									<p><strong>Stack:</strong> SQL, SQLite, Python, Pandas, Jupyter.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/Sesugh-dev01/hospital-sql-analysis" class="button">View Project</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2><a href="https://github.com/Sesugh-dev01/Weather-app">Desktop Weather App — PyQt5</a></h2>
+									</header>
+									<a href="https://github.com/Sesugh-dev01/Weather-app" class="image fit"><img src="images/weather.jpg" alt="Desktop weather app project" /></a>
+									<p>Desktop GUI that fetches live data from the OpenWeatherMap API, handles HTTP error
+									codes gracefully and manages credentials via a .env file.</p>
+									<p><strong>Stack:</strong> Python, PyQt5, REST API, python-dotenv.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/Sesugh-dev01/Weather-app" class="button">View Project</a></li>
+									</ul>
+								</article>
+							</section>
 
-        <!-- ── PROJECT 1: Titanic EDA ── -->
-        <div class="project-card reveal" data-category="eda">
-          <div class="project-card__header" style="--card-color:#0ea5e9">
-            <div class="project-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"/></svg>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/Sesugh-dev01/titanic-survival-analysis" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
-            </div>
-          </div>
-          <h3 class="project-card__title">Titanic Survival Analysis — EDA</h3>
-          <p class="project-card__desc">Exploratory data analysis on 891 Titanic passenger records to uncover what factors determined survival. Handled missing data in Age (20% gap) and Cabin (77% missing), then visualised survival rates across gender, passenger class, and age groups. Women in first class survived at 97% vs 13% for men in third class — a stark signal that rescue priority was shaped by both gender and economic class.</p>
-          <div class="project-card__tags">
-            <span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span><span>EDA</span>
-          </div>
-        </div>
+					</div>
 
-        <!-- ── PROJECT 2: Superstore Sales Dashboard ── -->
-        <div class="project-card reveal" data-category="eda">
-          <div class="project-card__header" style="--card-color:#f59e0b">
-            <div class="project-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/></svg>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/Sesugh-dev01/superstore-sales-dashboard" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
-            </div>
-          </div>
-          <h3 class="project-card__title">Superstore Sales Dashboard</h3>
-          <p class="project-card__desc">Analysis of 8,399 retail transactions across 21 variables to surface regional performance gaps, category trends, and top-selling products. The West region led with £3.6M in sales while Nunavut trailed at £116K — a 31× gap pointing to untapped regional opportunity. Monthly trend analysis revealed consistent Q4 spikes, informing inventory and staffing decisions for a business running on seasonal demand.</p>
-          <div class="project-card__tags">
-            <span>Python</span><span>Pandas</span><span>Matplotlib</span><span>GroupBy</span><span>EDA</span>
-          </div>
-        </div>
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>Get in touch</h2>
+							<p>I'm open to graduate Data Scientist and Data Analyst roles in the UK. The quickest way
+							to reach me is by email — I'm happy to share more detail on any project.</p>
+							<ul class="actions special">
+								<li><a href="mailto:sesughbarnabas919@gmail.com" class="button icon solid fa-envelope">Email me</a></li>
+							</ul>
+						</section>
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:sesughbarnabas919@gmail.com">sesughbarnabas919@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>GitHub</h3>
+								<p><a href="https://github.com/Sesugh-dev01">github.com/Sesugh-dev01</a></p>
+							</section>
+							<section>
+								<h3>LinkedIn</h3>
+								<p><a href="https://www.linkedin.com/in/sesugh-barnabas">in/sesugh-barnabas</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://github.com/Sesugh-dev01" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/sesugh-barnabas" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
 
-        <!-- ── PROJECT 4: Hospital SQL Analysis ── -->
-        <div class="project-card reveal" data-category="sql">
-          <div class="project-card__header" style="--card-color:#22c55e">
-            <div class="project-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/Sesugh-dev01/hospital-sql-analysis" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
-            </div>
-          </div>
-          <h3 class="project-card__title">Hospital Patient SQL Analysis</h3>
-          <p class="project-card__desc">Built a SQLite patient database from scratch and used SQL queries to answer five real business questions — identifying the most common condition (Diabetes, 2/5 patients), average patient age (44 years), condition-to-age relationships, and busiest admission periods. Results translated into plain-English insights using Python and Pandas, demonstrating end-to-end data-to-decision workflow.</p>
-          <div class="project-card__tags">
-            <span>SQL</span><span>SQLite</span><span>Python</span><span>Pandas</span><span>Jupyter</span>
-          </div>
-        </div>
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Sesugh Barnabas Kwaghmande</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
 
-        <!-- ── PROJECT 3: Weather App ── -->
-        <div class="project-card reveal" data-category="app">
-          <div class="project-card__header" style="--card-color:#6c63ff">
-            <div class="project-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z"/></svg>
-            </div>
-            <div class="project-card__links">
-              <a href="https://github.com/Sesugh-dev01/Weather-app" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
-            </div>
-          </div>
-          <h3 class="project-card__title">Desktop Weather App — PyQt5</h3>
-          <p class="project-card__desc">A fully functional desktop GUI application that fetches live weather data from the OpenWeatherMap API and displays temperature, conditions, and weather emoji for any city worldwide. Built with PyQt5, handles all HTTP error codes gracefully, and loads API credentials securely from a .env file — demonstrating REST API integration, event-driven UI design, and secure configuration management.</p>
-          <div class="project-card__tags">
-            <span>Python</span><span>PyQt5</span><span>REST API</span><span>python-dotenv</span><span>GUI</span>
-          </div>
-        </div>
+			</div>
 
-      </div>
-    </div>
-  </section>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-  <!-- ── SKILLS ─────────────────────────────────────────────────── -->
-  <section class="section skills" id="skills">
-    <div class="container">
-      <div class="section__header reveal">
-        <span class="section__tag">Expertise</span>
-        <h2 class="section__title">Skills &amp; Technologies</h2>
-      </div>
-      <div class="skills__layout">
-        <div class="skills__bars-col">
-          <h3 class="skills__col-title reveal">Core Proficiency</h3>
-          <p class="skills__legend reveal">■■■ Proficient &nbsp;·&nbsp; ■■□ Comfortable &nbsp;·&nbsp; ■□□ Learning</p>
-
-          <div class="skill-level reveal">
-            <div class="skill-level__left">
-              <span class="skill-level__name">Python</span>
-              <span class="skill-level__grade grade--proficient">Proficient</span>
-            </div>
-            <div class="skill-segs"><span class="seg seg--on"></span><span class="seg seg--on"></span><span class="seg seg--on"></span></div>
-          </div>
-
-          <div class="skill-level reveal">
-            <div class="skill-level__left">
-              <span class="skill-level__name">Data Analysis &amp; EDA</span>
-              <span class="skill-level__grade grade--comfortable">Comfortable</span>
-            </div>
-            <div class="skill-segs"><span class="seg seg--on"></span><span class="seg seg--on"></span><span class="seg"></span></div>
-          </div>
-
-          <div class="skill-level reveal">
-            <div class="skill-level__left">
-              <span class="skill-level__name">Data Visualisation</span>
-              <span class="skill-level__grade grade--comfortable">Comfortable</span>
-            </div>
-            <div class="skill-segs"><span class="seg seg--on"></span><span class="seg seg--on"></span><span class="seg"></span></div>
-          </div>
-
-          <div class="skill-level reveal">
-            <div class="skill-level__left">
-              <span class="skill-level__name">SQL &amp; Databases</span>
-              <span class="skill-level__grade grade--comfortable">Comfortable</span>
-            </div>
-            <div class="skill-segs"><span class="seg seg--on"></span><span class="seg seg--on"></span><span class="seg"></span></div>
-          </div>
-
-          <div class="skill-level reveal">
-            <div class="skill-level__left">
-              <span class="skill-level__name">Machine Learning</span>
-              <span class="skill-level__grade grade--learning">Learning</span>
-            </div>
-            <div class="skill-segs"><span class="seg seg--on"></span><span class="seg"></span><span class="seg"></span></div>
-          </div>
-        </div>
-        <div class="skills__tags-col">
-          <h3 class="skills__col-title reveal">Tech Stack</h3>
-          <div class="skills__category reveal">
-            <span class="skills__cat-label">Data Analysis</span>
-            <div class="tech-tags">
-              <span>Pandas</span><span>NumPy</span><span>SQL</span><span>EDA</span><span>ETL/ELT</span><span>CRISP-DM</span>
-            </div>
-          </div>
-          <div class="skills__category reveal">
-            <span class="skills__cat-label">Machine Learning</span>
-            <div class="tech-tags">
-              <span>scikit-learn</span><span>Random Forest</span><span>SVM</span><span>XGBoost</span><span>Feature Engineering</span>
-            </div>
-          </div>
-          <div class="skills__category reveal">
-            <span class="skills__cat-label">Visualisation &amp; Deployment</span>
-            <div class="tech-tags">
-              <span>Plotly</span><span>Streamlit</span><span>Matplotlib</span><span>Seaborn</span><span>FastAPI</span>
-            </div>
-          </div>
-          <div class="skills__category reveal">
-            <span class="skills__cat-label">Engineering &amp; Tools</span>
-            <div class="tech-tags">
-              <span>Git</span><span>Docker</span><span>SQLite</span><span>PostgreSQL</span><span>REST APIs</span><span>Linux</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CONTACT ────────────────────────────────────────────────── -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <div class="section__header reveal">
-        <span class="section__tag">Let's Talk</span>
-        <h2 class="section__title">Get In Touch</h2>
-      </div>
-      <div class="contact__grid">
-        <div class="contact__info reveal">
-          <p class="contact__intro">
-            I'm actively looking for graduate data science and ML engineer roles in the UK.
-            If you're hiring or working on something interesting, feel free to reach out —
-            I respond quickly.
-          </p>
-          <div class="contact__details">
-            <div class="contact__detail">
-              <div class="contact__detail-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
-              </div>
-              <div>
-                <span class="contact__detail-label">Email</span>
-                <span class="contact__detail-value">sesughbarnabas919@gmail.com</span>
-              </div>
-            </div>
-            <div class="contact__detail">
-              <div class="contact__detail-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
-              </div>
-              <div>
-                <span class="contact__detail-label">Location</span>
-                <span class="contact__detail-value">United Kingdom</span>
-              </div>
-            </div>
-            <div class="contact__detail">
-              <div class="contact__detail-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-              </div>
-              <div>
-                <span class="contact__detail-label">Status</span>
-                <span class="contact__detail-value contact__detail-value--green">Open to Grad Roles · Visa Sponsorship</span>
-              </div>
-            </div>
-          </div>
-          <div class="contact__socials">
-            <a href="https://github.com/sesugh-dev01" class="contact__social-btn" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/sesugh-barnabas" class="contact__social-btn" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="mailto:sesughbarnabas919@gmail.com" class="contact__social-btn">Email</a>
-          </div>
-        </div>
-        <form class="contact__form reveal" id="contactForm" novalidate>
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required />
-            <span class="form-error" id="nameError"></span>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required />
-            <span class="form-error" id="emailError"></span>
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell me more..." required></textarea>
-            <span class="form-error" id="messageError"></span>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
-            <span class="btn__text">Send Message</span>
-            <span class="btn__loader" hidden>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spinning"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-            </span>
-          </button>
-          <div class="form-success" id="formSuccess" hidden>
-            Message sent! I'll get back to you soon.
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ─────────────────────────────────────────────────── -->
-  <footer class="footer">
-    <div class="container">
-      <p>Designed &amp; Built by <strong>Sesugh Barnabas</strong> &middot; 2026</p>
-      <p class="footer__sub">Made with HTML, CSS &amp; JavaScript</p>
-    </div>
-  </footer>
-
-  <button class="scroll-top" id="scrollTop" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
-  </button>
-
-  <script src="script.js"></script>
-</body>
+	</body>
 </html>
